@@ -1,0 +1,227 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1>None</h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 800;
+            height: 800;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+        #loadingBar {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width: 800;
+            height: 800;
+            background-color:rgba(200,200,200,0.8);
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            opacity:1;
+        }
+
+        #bar {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:20px;
+            height:20px;
+            margin:auto auto auto auto;
+            border-radius:11px;
+            border:2px solid rgba(30,30,30,0.05);
+            background: rgb(0, 173, 246); /* Old browsers */
+            box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+        }
+
+        #border {
+            position:absolute;
+            top:10px;
+            left:10px;
+            width:500px;
+            height:23px;
+            margin:auto auto auto auto;
+            box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+            border-radius:10px;
+        }
+
+        #text {
+            position:absolute;
+            top:8px;
+            left:530px;
+            width:30px;
+            height:50px;
+            margin:auto auto auto auto;
+            font-size:22px;
+            color: #000000;
+        }
+
+        div.outerBorder {
+            position:relative;
+            top:400px;
+            width:600px;
+            height:44px;
+            margin:auto auto auto auto;
+            border:8px solid rgba(0,0,0,0.1);
+            background: rgb(252,252,252); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+            border-radius:72px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+<div id="loadingBar">
+    <div class="outerBorder">
+        <div id="text">0%</div>
+        <div id="border">
+            <div id="bar"></div>
+        </div>
+    </div>
+</div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "covid-19 (P)", "label": "covid-19 (P)", "shape": "dot", "size": 10}, {"id": "dead (O)", "label": "dead (O)", "shape": "dot", "size": 10}, {"id": "covid-19 (I)", "label": "covid-19 (I)", "shape": "dot", "size": 10}, {"id": "severe (O)", "label": "severe (O)", "shape": "dot", "size": 10}, {"id": "covid-19 (O)", "label": "covid-19 (O)", "shape": "dot", "size": 10}, {"id": "hydroxychloroquine (I)", "label": "hydroxychloroquine (I)", "shape": "dot", "size": 10}, {"id": "outcome (O)", "label": "outcome (O)", "shape": "dot", "size": 10}, {"id": "control (I)", "label": "control (I)", "shape": "dot", "size": 10}, {"id": "fever (O)", "label": "fever (O)", "shape": "dot", "size": 10}, {"id": "severe (I)", "label": "severe (I)", "shape": "dot", "size": 10}, {"id": "symptom (O)", "label": "symptom (O)", "shape": "dot", "size": 10}, {"id": "severe covid-19 (O)", "label": "severe covid-19 (O)", "shape": "dot", "size": 10}, {"id": "cough (O)", "label": "cough (O)", "shape": "dot", "size": 10}, {"id": "D-dimer (O)", "label": "D-dimer (O)", "shape": "dot", "size": 10}, {"id": "comorbidity (O)", "label": "comorbidity (O)", "shape": "dot", "size": 10}, {"id": "prognosi (O)", "label": "prognosi (O)", "shape": "dot", "size": 10}, {"id": "safety (O)", "label": "safety (O)", "shape": "dot", "size": 10}, {"id": "efficacy (O)", "label": "efficacy (O)", "shape": "dot", "size": 10}, {"id": "HCQ (I)", "label": "HCQ (I)", "shape": "dot", "size": 10}, {"id": "fatigue (O)", "label": "fatigue (O)", "shape": "dot", "size": 10}, {"id": "treatment (O)", "label": "treatment (O)", "shape": "dot", "size": 10}, {"id": "C-reactive protein (O)", "label": "C-reactive protein (O)", "shape": "dot", "size": 10}, {"id": "in-hospital mortality (O)", "label": "in-hospital mortality (O)", "shape": "dot", "size": 10}, {"id": "clinical outcomes (O)", "label": "clinical outcomes (O)", "shape": "dot", "size": 10}, {"id": "mechanical ventilation (O)", "label": "mechanical ventilation (O)", "shape": "dot", "size": 10}, {"id": "mortality rate (O)", "label": "mortality rate (O)", "shape": "dot", "size": 10}, {"id": "complication (O)", "label": "complication (O)", "shape": "dot", "size": 10}, {"id": "risk factors (O)", "label": "risk factors (O)", "shape": "dot", "size": 10}, {"id": "dyspnea (O)", "label": "dyspnea (O)", "shape": "dot", "size": 10}, {"id": "convalescent plasma (I)", "label": "convalescent plasma (I)", "shape": "dot", "size": 10}, {"id": "odds ratio (O)", "label": "odds ratio (O)", "shape": "dot", "size": 10}, {"id": "clinical characteristics (O)", "label": "clinical characteristics (O)", "shape": "dot", "size": 10}, {"id": "IL-6 (O)", "label": "IL-6 (O)", "shape": "dot", "size": 10}, {"id": "specificity (O)", "label": "specificity (O)", "shape": "dot", "size": 10}, {"id": "remdesivir (I)", "label": "remdesivir (I)", "shape": "dot", "size": 10}, {"id": "tocilizumab (I)", "label": "tocilizumab (I)", "shape": "dot", "size": 10}, {"id": "AST (O)", "label": "AST (O)", "shape": "dot", "size": 10}, {"id": "severity (O)", "label": "severity (O)", "shape": "dot", "size": 10}, {"id": "lymphopenium (O)", "label": "lymphopenium (O)", "shape": "dot", "size": 10}, {"id": "sensitivity (O)", "label": "sensitivity (O)", "shape": "dot", "size": 10}, {"id": "placebo (I)", "label": "placebo (I)", "shape": "dot", "size": 10}, {"id": "corticosteroid (I)", "label": "corticosteroid (I)", "shape": "dot", "size": 10}, {"id": "diarrhea (O)", "label": "diarrhea (O)", "shape": "dot", "size": 10}, {"id": "CRP (O)", "label": "CRP (O)", "shape": "dot", "size": 10}, {"id": "ICU admission (O)", "label": "ICU admission (O)", "shape": "dot", "size": 10}, {"id": "disease severity (O)", "label": "disease severity (O)", "shape": "dot", "size": 10}, {"id": "lactate dehydrogenase (O)", "label": "lactate dehydrogenase (O)", "shape": "dot", "size": 10}, {"id": "invasive mechanical ventilation (O)", "label": "invasive mechanical ventilation (O)", "shape": "dot", "size": 10}, {"id": "LDH (O)", "label": "LDH (O)", "shape": "dot", "size": 10}, {"id": "severity of COVID-19 (O)", "label": "severity of COVID-19 (O)", "shape": "dot", "size": 10}, {"id": "sore throat (O)", "label": "sore throat (O)", "shape": "dot", "size": 10}, {"id": "risk of death (O)", "label": "risk of death (O)", "shape": "dot", "size": 10}, {"id": "lymphocyte count (O)", "label": "lymphocyte count (O)", "shape": "dot", "size": 10}, {"id": "diabetes (I)", "label": "diabetes (I)", "shape": "dot", "size": 10}, {"id": "laboratory findings (O)", "label": "laboratory findings (O)", "shape": "dot", "size": 10}, {"id": "hospitalization (O)", "label": "hospitalization (O)", "shape": "dot", "size": 10}, {"id": "shortness of breath (O)", "label": "shortness of breath (O)", "shape": "dot", "size": 10}, {"id": "AKI (I)", "label": "AKI (I)", "shape": "dot", "size": 10}, {"id": "AKI (O)", "label": "AKI (O)", "shape": "dot", "size": 10}, {"id": "lymphocyte (O)", "label": "lymphocyte (O)", "shape": "dot", "size": 10}, {"id": "azithromycin (I)", "label": "azithromycin (I)", "shape": "dot", "size": 10}, {"id": "NLR (O)", "label": "NLR (O)", "shape": "dot", "size": 10}, {"id": "procalcitonin (O)", "label": "procalcitonin (O)", "shape": "dot", "size": 10}, {"id": "risk (O)", "label": "risk (O)", "shape": "dot", "size": 10}, {"id": "adverse events (O)", "label": "adverse events (O)", "shape": "dot", "size": 10}, {"id": "intubation (O)", "label": "intubation (O)", "shape": "dot", "size": 10}, {"id": "headache (O)", "label": "headache (O)", "shape": "dot", "size": 10}, {"id": "in-hospital death (O)", "label": "in-hospital death (O)", "shape": "dot", "size": 10}, {"id": "D-dimer levels (O)", "label": "D-dimer levels (O)", "shape": "dot", "size": 10}, {"id": "IL-10 (O)", "label": "IL-10 (O)", "shape": "dot", "size": 10}, {"id": "clinical manifestations (O)", "label": "clinical manifestations (O)", "shape": "dot", "size": 10}, {"id": "creatinine (O)", "label": "creatinine (O)", "shape": "dot", "size": 10}, {"id": "clinical symptoms (O)", "label": "clinical symptoms (O)", "shape": "dot", "size": 10}, {"id": "colchicine (I)", "label": "colchicine (I)", "shape": "dot", "size": 10}, {"id": "survival (O)", "label": "survival (O)", "shape": "dot", "size": 10}, {"id": "myocardial injury (O)", "label": "myocardial injury (O)", "shape": "dot", "size": 10}, {"id": "severe (P)", "label": "severe (P)", "shape": "dot", "size": 10}, {"id": "age (P)", "label": "age (P)", "shape": "dot", "size": 10}, {"id": "severe covid-19 (P)", "label": "severe covid-19 (P)", "shape": "dot", "size": 10}, {"id": "male (P)", "label": "male (P)", "shape": "dot", "size": 10}, {"id": "diabetes (P)", "label": "diabetes (P)", "shape": "dot", "size": 10}, {"id": "elderly (P)", "label": "elderly (P)", "shape": "dot", "size": 10}, {"id": "female (P)", "label": "female (P)", "shape": "dot", "size": 10}, {"id": "hypertension (P)", "label": "hypertension (P)", "shape": "dot", "size": 10}, {"id": "comorbidity (P)", "label": "comorbidity (P)", "shape": "dot", "size": 10}, {"id": "COVID-19 pneumonia (P)", "label": "COVID-19 pneumonia (P)", "shape": "dot", "size": 10}, {"id": "median age (P)", "label": "median age (P)", "shape": "dot", "size": 10}, {"id": "cancer (P)", "label": "cancer (P)", "shape": "dot", "size": 10}, {"id": "adult (P)", "label": "adult (P)", "shape": "dot", "size": 10}, {"id": "dead (P)", "label": "dead (P)", "shape": "dot", "size": 10}, {"id": "aged (P)", "label": "aged (P)", "shape": "dot", "size": 10}, {"id": "icu (P)", "label": "icu (P)", "shape": "dot", "size": 10}, {"id": "obesity (P)", "label": "obesity (P)", "shape": "dot", "size": 10}, {"id": "gender (P)", "label": "gender (P)", "shape": "dot", "size": 10}, {"id": "ferritin (O)", "label": "ferritin (O)", "shape": "dot", "size": 10}, {"id": "cardiomyopathy (O)", "label": "cardiomyopathy (O)", "shape": "dot", "size": 10}, {"id": "female (I)", "label": "female (I)", "shape": "dot", "size": 10}, {"id": "male (I)", "label": "male (I)", "shape": "dot", "size": 10}, {"id": "serious adverse events (O)", "label": "serious adverse events (O)", "shape": "dot", "size": 10}, {"id": "pediatric (P)", "label": "pediatric (P)", "shape": "dot", "size": 10}, {"id": "MAP (O)", "label": "MAP (O)", "shape": "dot", "size": 10}, {"id": "dexmedetomidine (I)", "label": "dexmedetomidine (I)", "shape": "dot", "size": 10}, {"id": "midazolam (I)", "label": "midazolam (I)", "shape": "dot", "size": 10}, {"id": "HR (O)", "label": "HR (O)", "shape": "dot", "size": 10}, {"id": "PaO2 (O)", "label": "PaO2 (O)", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "covid-19 (P)", "to": "dead (O)", "weight": 13390200}, {"from": "covid-19 (P)", "to": "covid-19 (I)", "weight": 10154900}, {"from": "covid-19 (P)", "to": "severe (O)", "weight": 5857400}, {"from": "covid-19 (P)", "to": "covid-19 (O)", "weight": 4343300}, {"from": "covid-19 (P)", "to": "hydroxychloroquine (I)", "weight": 3381900}, {"from": "covid-19 (P)", "to": "outcome (O)", "weight": 3058000}, {"from": "covid-19 (P)", "to": "control (I)", "weight": 2207900}, {"from": "covid-19 (P)", "to": "fever (O)", "weight": 2121600}, {"from": "covid-19 (P)", "to": "severe (I)", "weight": 1989300}, {"from": "covid-19 (P)", "to": "symptom (O)", "weight": 1916000}, {"from": "covid-19 (P)", "to": "severe covid-19 (O)", "weight": 1907500}, {"from": "covid-19 (P)", "to": "cough (O)", "weight": 1835200}, {"from": "covid-19 (P)", "to": "D-dimer (O)", "weight": 1833900}, {"from": "covid-19 (P)", "to": "comorbidity (O)", "weight": 1777200}, {"from": "covid-19 (P)", "to": "prognosi (O)", "weight": 1399800}, {"from": "covid-19 (P)", "to": "safety (O)", "weight": 1317100}, {"from": "covid-19 (P)", "to": "efficacy (O)", "weight": 1272900}, {"from": "covid-19 (P)", "to": "HCQ (I)", "weight": 1163300}, {"from": "covid-19 (P)", "to": "fatigue (O)", "weight": 1159000}, {"from": "covid-19 (P)", "to": "treatment (O)", "weight": 1143200}, {"from": "covid-19 (P)", "to": "C-reactive protein (O)", "weight": 1127600}, {"from": "covid-19 (P)", "to": "in-hospital mortality (O)", "weight": 1048500}, {"from": "covid-19 (P)", "to": "clinical outcomes (O)", "weight": 1043600}, {"from": "covid-19 (P)", "to": "mechanical ventilation (O)", "weight": 1004800}, {"from": "covid-19 (P)", "to": "mortality rate (O)", "weight": 950900}, {"from": "covid-19 (P)", "to": "complication (O)", "weight": 945900}, {"from": "covid-19 (P)", "to": "risk factors (O)", "weight": 925900}, {"from": "covid-19 (P)", "to": "dyspnea (O)", "weight": 925600}, {"from": "covid-19 (P)", "to": "convalescent plasma (I)", "weight": 878300}, {"from": "covid-19 (P)", "to": "odds ratio (O)", "weight": 837100}, {"from": "covid-19 (P)", "to": "clinical characteristics (O)", "weight": 837000}, {"from": "covid-19 (P)", "to": "IL-6 (O)", "weight": 811800}, {"from": "covid-19 (P)", "to": "specificity (O)", "weight": 789400}, {"from": "covid-19 (P)", "to": "remdesivir (I)", "weight": 763900}, {"from": "covid-19 (P)", "to": "tocilizumab (I)", "weight": 761500}, {"from": "covid-19 (P)", "to": "AST (O)", "weight": 750900}, {"from": "covid-19 (P)", "to": "severity (O)", "weight": 749200}, {"from": "covid-19 (P)", "to": "lymphopenium (O)", "weight": 721000}, {"from": "covid-19 (P)", "to": "sensitivity (O)", "weight": 695300}, {"from": "covid-19 (P)", "to": "placebo (I)", "weight": 694300}, {"from": "covid-19 (P)", "to": "corticosteroid (I)", "weight": 687000}, {"from": "covid-19 (P)", "to": "diarrhea (O)", "weight": 651400}, {"from": "covid-19 (P)", "to": "CRP (O)", "weight": 632300}, {"from": "covid-19 (P)", "to": "ICU admission (O)", "weight": 628500}, {"from": "covid-19 (P)", "to": "disease severity (O)", "weight": 624200}, {"from": "covid-19 (P)", "to": "lactate dehydrogenase (O)", "weight": 623000}, {"from": "covid-19 (P)", "to": "invasive mechanical ventilation (O)", "weight": 617700}, {"from": "covid-19 (P)", "to": "LDH (O)", "weight": 609600}, {"from": "covid-19 (P)", "to": "severity of COVID-19 (O)", "weight": 592600}, {"from": "covid-19 (P)", "to": "sore throat (O)", "weight": 588300}, {"from": "covid-19 (P)", "to": "risk of death (O)", "weight": 582000}, {"from": "covid-19 (P)", "to": "lymphocyte count (O)", "weight": 579700}, {"from": "covid-19 (P)", "to": "diabetes (I)", "weight": 566400}, {"from": "covid-19 (P)", "to": "laboratory findings (O)", "weight": 565900}, {"from": "covid-19 (P)", "to": "hospitalization (O)", "weight": 556500}, {"from": "covid-19 (P)", "to": "shortness of breath (O)", "weight": 546400}, {"from": "covid-19 (P)", "to": "AKI (I)", "weight": 540600}, {"from": "covid-19 (P)", "to": "AKI (O)", "weight": 535500}, {"from": "covid-19 (P)", "to": "lymphocyte (O)", "weight": 533100}, {"from": "covid-19 (P)", "to": "azithromycin (I)", "weight": 527400}, {"from": "covid-19 (P)", "to": "NLR (O)", "weight": 515900}, {"from": "covid-19 (P)", "to": "procalcitonin (O)", "weight": 507800}, {"from": "covid-19 (P)", "to": "risk (O)", "weight": 495900}, {"from": "covid-19 (P)", "to": "adverse events (O)", "weight": 488800}, {"from": "covid-19 (P)", "to": "intubation (O)", "weight": 481900}, {"from": "covid-19 (P)", "to": "headache (O)", "weight": 478000}, {"from": "covid-19 (P)", "to": "in-hospital death (O)", "weight": 471200}, {"from": "covid-19 (P)", "to": "D-dimer levels (O)", "weight": 470700}, {"from": "covid-19 (P)", "to": "IL-10 (O)", "weight": 463200}, {"from": "covid-19 (P)", "to": "clinical manifestations (O)", "weight": 460900}, {"from": "covid-19 (P)", "to": "creatinine (O)", "weight": 457100}, {"from": "covid-19 (P)", "to": "clinical symptoms (O)", "weight": 452400}, {"from": "covid-19 (P)", "to": "colchicine (I)", "weight": 445200}, {"from": "covid-19 (P)", "to": "survival (O)", "weight": 442300}, {"from": "covid-19 (P)", "to": "myocardial injury (O)", "weight": 441000}, {"from": "dead (O)", "to": "severe (P)", "weight": 4809800}, {"from": "dead (O)", "to": "age (P)", "weight": 4672900}, {"from": "dead (O)", "to": "severe covid-19 (P)", "weight": 3701600}, {"from": "dead (O)", "to": "covid-19 (I)", "weight": 3691700}, {"from": "dead (O)", "to": "male (P)", "weight": 3175600}, {"from": "dead (O)", "to": "diabetes (P)", "weight": 2412100}, {"from": "dead (O)", "to": "elderly (P)", "weight": 1957200}, {"from": "dead (O)", "to": "female (P)", "weight": 1667300}, {"from": "dead (O)", "to": "hypertension (P)", "weight": 1638900}, {"from": "dead (O)", "to": "comorbidity (P)", "weight": 1290600}, {"from": "dead (O)", "to": "tocilizumab (I)", "weight": 1076800}, {"from": "dead (O)", "to": "hydroxychloroquine (I)", "weight": 956300}, {"from": "dead (O)", "to": "COVID-19 pneumonia (P)", "weight": 890300}, {"from": "dead (O)", "to": "control (I)", "weight": 766900}, {"from": "dead (O)", "to": "median age (P)", "weight": 741000}, {"from": "dead (O)", "to": "cancer (P)", "weight": 656800}, {"from": "dead (O)", "to": "adult (P)", "weight": 653800}, {"from": "dead (O)", "to": "severe (I)", "weight": 633100}, {"from": "dead (O)", "to": "dead (P)", "weight": 580400}, {"from": "dead (O)", "to": "aged (P)", "weight": 580200}, {"from": "dead (O)", "to": "corticosteroid (I)", "weight": 578300}, {"from": "dead (O)", "to": "icu (P)", "weight": 567600}, {"from": "dead (O)", "to": "convalescent plasma (I)", "weight": 542100}, {"from": "dead (O)", "to": "obesity (P)", "weight": 537500}, {"from": "dead (O)", "to": "gender (P)", "weight": 492700}, {"from": "dead (O)", "to": "diabetes (I)", "weight": 481800}, {"from": "covid-19 (I)", "to": "severe (P)", "weight": 3039200}, {"from": "covid-19 (I)", "to": "covid-19 (O)", "weight": 2151300}, {"from": "covid-19 (I)", "to": "age (P)", "weight": 2008300}, {"from": "covid-19 (I)", "to": "severe (O)", "weight": 1999900}, {"from": "covid-19 (I)", "to": "male (P)", "weight": 1434000}, {"from": "covid-19 (I)", "to": "severe covid-19 (P)", "weight": 1240400}, {"from": "covid-19 (I)", "to": "diabetes (P)", "weight": 1091000}, {"from": "covid-19 (I)", "to": "outcome (O)", "weight": 1017800}, {"from": "covid-19 (I)", "to": "fever (O)", "weight": 896600}, {"from": "covid-19 (I)", "to": "elderly (P)", "weight": 777600}, {"from": "covid-19 (I)", "to": "female (P)", "weight": 710800}, {"from": "covid-19 (I)", "to": "symptom (O)", "weight": 673500}, {"from": "covid-19 (I)", "to": "severe covid-19 (O)", "weight": 657900}, {"from": "covid-19 (I)", "to": "cough (O)", "weight": 655800}, {"from": "covid-19 (I)", "to": "D-dimer (O)", "weight": 611200}, {"from": "covid-19 (I)", "to": "cancer (P)", "weight": 548300}, {"from": "covid-19 (I)", "to": "hypertension (P)", "weight": 537200}, {"from": "covid-19 (I)", "to": "comorbidity (P)", "weight": 492800}, {"from": "covid-19 (I)", "to": "COVID-19 pneumonia (P)", "weight": 481800}, {"from": "covid-19 (I)", "to": "fatigue (O)", "weight": 446400}, {"from": "severe (O)", "to": "severe (P)", "weight": 4440200}, {"from": "severe (O)", "to": "male (P)", "weight": 1352100}, {"from": "severe (O)", "to": "age (P)", "weight": 1252300}, {"from": "severe (O)", "to": "severe covid-19 (P)", "weight": 1170600}, {"from": "severe (O)", "to": "female (P)", "weight": 954300}, {"from": "severe (O)", "to": "diabetes (P)", "weight": 603500}, {"from": "severe (O)", "to": "severe (I)", "weight": 568700}, {"from": "severe (O)", "to": "comorbidity (P)", "weight": 525800}, {"from": "severe (O)", "to": "elderly (P)", "weight": 489400}, {"from": "severe (O)", "to": "convalescent plasma (I)", "weight": 447000}, {"from": "severe (P)", "to": "severe (I)", "weight": 2264500}, {"from": "severe (P)", "to": "D-dimer (O)", "weight": 1256900}, {"from": "severe (P)", "to": "outcome (O)", "weight": 1024200}, {"from": "severe (P)", "to": "fever (O)", "weight": 989400}, {"from": "severe (P)", "to": "severe covid-19 (O)", "weight": 958800}, {"from": "severe (P)", "to": "covid-19 (O)", "weight": 902200}, {"from": "severe (P)", "to": "hydroxychloroquine (I)", "weight": 789800}, {"from": "severe (P)", "to": "comorbidity (O)", "weight": 758600}, {"from": "severe (P)", "to": "IL-6 (O)", "weight": 740500}, {"from": "severe (P)", "to": "symptom (O)", "weight": 699100}, {"from": "severe (P)", "to": "C-reactive protein (O)", "weight": 687300}, {"from": "severe (P)", "to": "cough (O)", "weight": 669500}, {"from": "severe (P)", "to": "control (I)", "weight": 618000}, {"from": "severe (P)", "to": "disease severity (O)", "weight": 579000}, {"from": "severe (P)", "to": "treatment (O)", "weight": 541300}, {"from": "severe (P)", "to": "ferritin (O)", "weight": 532700}, {"from": "severe (P)", "to": "clinical characteristics (O)", "weight": 512200}, {"from": "severe (P)", "to": "cardiomyopathy (O)", "weight": 491400}, {"from": "severe (P)", "to": "dyspnea (O)", "weight": 476300}, {"from": "severe (P)", "to": "intubation (O)", "weight": 465300}, {"from": "severe (P)", "to": "fatigue (O)", "weight": 457900}, {"from": "severe (P)", "to": "severity (O)", "weight": 450400}, {"from": "severe (P)", "to": "lymphocyte count (O)", "weight": 449300}, {"from": "severe (P)", "to": "clinical outcomes (O)", "weight": 438100}, {"from": "age (P)", "to": "outcome (O)", "weight": 841500}, {"from": "age (P)", "to": "fever (O)", "weight": 777500}, {"from": "age (P)", "to": "covid-19 (O)", "weight": 716400}, {"from": "age (P)", "to": "cough (O)", "weight": 695100}, {"from": "age (P)", "to": "comorbidity (O)", "weight": 624600}, {"from": "age (P)", "to": "symptom (O)", "weight": 618400}, {"from": "age (P)", "to": "severe covid-19 (O)", "weight": 572300}, {"from": "age (P)", "to": "in-hospital mortality (O)", "weight": 458800}, {"from": "age (P)", "to": "severe (I)", "weight": 454200}, {"from": "covid-19 (O)", "to": "hydroxychloroquine (I)", "weight": 777600}, {"from": "covid-19 (O)", "to": "male (P)", "weight": 646000}, {"from": "covid-19 (O)", "to": "female (P)", "weight": 561000}, {"from": "covid-19 (O)", "to": "diabetes (P)", "weight": 519900}, {"from": "covid-19 (O)", "to": "elderly (P)", "weight": 476400}, {"from": "severe covid-19 (P)", "to": "control (I)", "weight": 826000}, {"from": "severe covid-19 (P)", "to": "tocilizumab (I)", "weight": 820400}, {"from": "severe covid-19 (P)", "to": "D-dimer (O)", "weight": 595200}, {"from": "severe covid-19 (P)", "to": "outcome (O)", "weight": 594800}, {"from": "severe covid-19 (P)", "to": "severe (I)", "weight": 524200}, {"from": "severe covid-19 (P)", "to": "severe covid-19 (O)", "weight": 512200}, {"from": "severe covid-19 (P)", "to": "IL-6 (O)", "weight": 466900}, {"from": "hydroxychloroquine (I)", "to": "efficacy (O)", "weight": 436300}, {"from": "male (P)", "to": "outcome (O)", "weight": 666400}, {"from": "male (P)", "to": "fever (O)", "weight": 585400}, {"from": "male (P)", "to": "comorbidity (O)", "weight": 487600}, {"from": "male (P)", "to": "female (I)", "weight": 465400}, {"from": "male (P)", "to": "cough (O)", "weight": 460800}, {"from": "male (P)", "to": "male (I)", "weight": 450000}, {"from": "outcome (O)", "to": "diabetes (P)", "weight": 566600}, {"from": "diabetes (P)", "to": "diabetes (I)", "weight": 923800}, {"from": "control (I)", "to": "safety (O)", "weight": 471400}, {"from": "safety (O)", "to": "HCQ (I)", "weight": 573200}, {"from": "safety (O)", "to": "convalescent plasma (I)", "weight": 457600}, {"from": "efficacy (O)", "to": "HCQ (I)", "weight": 594900}, {"from": "convalescent plasma (I)", "to": "adverse events (O)", "weight": 853800}, {"from": "convalescent plasma (I)", "to": "serious adverse events (O)", "weight": 673400}, {"from": "AST (O)", "to": "pediatric (P)", "weight": 512400}, {"from": "MAP (O)", "to": "dexmedetomidine (I)", "weight": 667200}, {"from": "MAP (O)", "to": "midazolam (I)", "weight": 611600}, {"from": "dexmedetomidine (I)", "to": "HR (O)", "weight": 667200}, {"from": "dexmedetomidine (I)", "to": "PaO2 (O)", "weight": 500400}, {"from": "dexmedetomidine (I)", "to": "intubation (O)", "weight": 500400}, {"from": "HR (O)", "to": "midazolam (I)", "weight": 611600}, {"from": "midazolam (I)", "to": "PaO2 (O)", "weight": 458700}, {"from": "midazolam (I)", "to": "intubation (O)", "weight": 458700}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.3,
+            "damping": 0.09,
+            "gravitationalConstant": -80000,
+            "springConstant": 0.001,
+            "springLength": 250
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+        network.on("stabilizationProgress", function(params) {
+      		document.getElementById('loadingBar').removeAttribute("style");
+	        var maxWidth = 496;
+	        var minWidth = 20;
+	        var widthFactor = params.iterations/params.total;
+	        var width = Math.max(minWidth,maxWidth * widthFactor);
+
+	        document.getElementById('bar').style.width = width + 'px';
+	        document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+	    });
+	    network.once("stabilizationIterationsDone", function() {
+	        document.getElementById('text').innerHTML = '100%';
+	        document.getElementById('bar').style.width = '496px';
+	        document.getElementById('loadingBar').style.opacity = 0;
+	        // really clean the dom element
+	        setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+	    });
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
