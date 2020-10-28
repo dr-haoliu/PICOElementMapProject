@@ -51,14 +51,12 @@
     * assign 10% sample with ambiguous tags to develop heuristic to classify or derive confidence/ambiguity scores
 * DONE: assigning proper subsection titles to json and re-run tian's parser
 * DONE: **send PMID list to Fengyang**
-* new functionalities:
+* DONE: new functionalities:
     * group PMID's by given set of entities
     * get original sentence text easily
-* similarity score between articles
+* DISCUSS: similarity score between articles
     * check ambiguous/context-less tags and deriving confidence/ambiguity scores
     * tag hierarchy
-* assign 10% of samples to everybody for severe only; each person gets a CSV file for 
-    * assign 10% sample with ambiguous tags to develop heuristic to classify or derive confidence/ambiguity scores
 * fix synonym checker to merge similar tags
 * manually investigate preferred outcomes, treatments
 
