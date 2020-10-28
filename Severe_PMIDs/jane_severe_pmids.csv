@@ -1,27 +1,27 @@
 ,pmid,text,sentence,subtag
-0,32052373,severe,"This paper summarizes important considerations regarding patient screening , environmental controls , personal protective equipment , resuscitation measures ( including intubation ) , and critical care unit operations planning as",
-1,32061198,severe,"The novel coronavirus 2019 ( COVID-19 ) infected patients by binding human ACE2 , leading to severe pneumonia and highly mortality rate in patients .",
-2,32061198,severe,Increased ACE and Ang II are poor prognostic factors for severe pneumonia .,
-3,32077660,severe,"ALT , AST , ALB and TBil of the severe or critical subgroups were 60.25 ( 40.88 ~ 68.90 ) U/L , 37.00 ( 20.88 ~ 64.45 ) U/L ,",
-4,32098422,severe,severe symptoms in respiratory tract infections .,
-5,32145714,severe,"Result : s ( 1 ) Of the 16 pregnant women with COVID-19 , 15 cases were ordinary type and 1 case was severe type .",
-6,32164090,severe,"multiple mottling and ground-glass opacity.Compared with the patients infected in the protected period , the proportion of severe infection and bilateral pneumonia were both increased in the patients infected in",
-7,32164092,severe,"The novel coronavirus 2019 ( COVID-19 ) infected patients by binding human ACE2 , leading to severe pneumonia and highly mortality rate in patients .",
-8,32164092,severe,Increased ACE and Ang II are poor prognostic factors for severe pneumonia .,
-9,32164424,severe,The reported severe/critical case ratio is approximately 7-10 % and median time to intensive care admission is 9.5-10.5 days with mortality of around 1-2 % varied geographically .,
-10,32171866,severe,Elderly patients with COVID-19 are more likely to progress to severe disease .,
-11,32173576,severe,"Three patients stopped lopinavir because of adverse effects , two of them deteriorated , one was hospitalized longer than others who with sustained lopinavir use .",
-12,32173725,severe,"levels of maximum temperature among fever cases , higher incidence of breath shortness and anorexia , severer disease assessment on admission , high levels of neutrophil , aspartate aminotransferase (",
-13,32196083,severe,"HCQ is likely to attenuate the severe progression of COVID-19 , inhibiting the cytokine storm by suppressing T cell activation .",
-14,32202343,severe,"Diagnostic findings have been similar to adults , with fever and respiratory symptoms being prevalent , but fewer children seem to have developed severe pneumonia .",
-15,32213260,severe,Most studies were at serious or critical RoB ; no studies were at low RoB .,
-16,32222466,severe,"Reports from China showed that about 20 % of patients developed severe disease , resulting in a fatality of 4 % .",
-17,32224151,severe,A total of 15 ( 53.6 % ) patients had severe events and the mortality rate was 28.6 % .,
-18,32224151,severe,"If the last antitumour treatment was within 14 days , it significantly increased the risk of developing severe events [ hazard ratio ( HR ) = 4.079 , 95 %",
-19,32224151,severe,Antitumour treatment within 14 days of COVID-19 diagnosis increased the risk of developing severe events .,
-20,32224151,severe,"Univariate and multivariate analyses were carried out to assess the risk factors associated with severe events defined as a condition requiring admission to an intensive care unit , the use",
-21,32227090,severe,risk of heart attack and critically ill condition .,
-22,32227090,severe,The finding of this study explains the high rate of severe cases among COVID-19 patients with basic cardiovascular disease ; and these results also perhaps provide important reference to clinical,
-23,32227123,severe,"Total lymphocytes , CD4+ T cells , CD8+ T cells , B cells , and natural killer ( NK ) cells decreased in COVID-19 patients , and severe cases had",
-24,32228222,severe,We observed that patients receiving ACEI or ARB therapy had a lower rate of severe diseases and a trend toward a lower level of IL-6 in peripheral blood .,
-25,32232685,severe,"Among the 27 patients with severe acute respiratory failure , four patients were eventually intubated ( 15 % ) .",
+0,32052373,severe,"This paper summarizes important considerations regarding patient screening , environmental controls , personal protective equipment , resuscitation measures ( including intubation ) , and critical care unit operations planning as",ICU
+1,32061198,severe,"The novel coronavirus 2019 ( COVID-19 ) infected patients by binding human ACE2 , leading to severe pneumonia and highly mortality rate in patients .",Severe other disease
+2,32061198,severe,Increased ACE and Ang II are poor prognostic factors for severe pneumonia .,Severe other disease
+3,32077660,severe,"ALT , AST , ALB and TBil of the severe or critical subgroups were 60.25 ( 40.88 ~ 68.90 ) U/L , 37.00 ( 20.88 ~ 64.45 ) U/L ,",Severe case
+4,32098422,severe,severe symptoms in respiratory tract infections .,Severe other disease
+5,32145714,severe,"Result : s ( 1 ) Of the 16 pregnant women with COVID-19 , 15 cases were ordinary type and 1 case was severe type .",Severe case
+6,32164090,severe,"multiple mottling and ground-glass opacity.Compared with the patients infected in the protected period , the proportion of severe infection and bilateral pneumonia were both increased in the patients infected in",Severe case
+7,32164092,severe,"The novel coronavirus 2019 ( COVID-19 ) infected patients by binding human ACE2 , leading to severe pneumonia and highly mortality rate in patients .",Severe other disease
+8,32164092,severe,Increased ACE and Ang II are poor prognostic factors for severe pneumonia .,Severe other disease
+9,32164424,severe,The reported severe/critical case ratio is approximately 7-10 % and median time to intensive care admission is 9.5-10.5 days with mortality of around 1-2 % varied geographically .,Severe case
+10,32171866,severe,Elderly patients with COVID-19 are more likely to progress to severe disease .,Severe other disease
+11,32173576,severe,"Three patients stopped lopinavir because of adverse effects , two of them deteriorated , one was hospitalized longer than others who with sustained lopinavir use .",Severe adverse effect
+12,32173725,severe,"levels of maximum temperature among fever cases , higher incidence of breath shortness and anorexia , severer disease assessment on admission , high levels of neutrophil , aspartate aminotransferase (",Severe case
+13,32196083,severe,"HCQ is likely to attenuate the severe progression of COVID-19 , inhibiting the cytokine storm by suppressing T cell activation .",Severe case
+14,32202343,severe,"Diagnostic findings have been similar to adults , with fever and respiratory symptoms being prevalent , but fewer children seem to have developed severe pneumonia .",Severe other disease
+15,32213260,severe,Most studies were at serious or critical RoB ; no studies were at low RoB .,Severe other
+16,32222466,severe,"Reports from China showed that about 20 % of patients developed severe disease , resulting in a fatality of 4 % .",Severe case
+17,32224151,severe,A total of 15 ( 53.6 % ) patients had severe events and the mortality rate was 28.6 % .,Severe adverse effect
+18,32224151,severe,"If the last antitumour treatment was within 14 days , it significantly increased the risk of developing severe events [ hazard ratio ( HR ) = 4.079 , 95 %",Severe adverse effect
+19,32224151,severe,Antitumour treatment within 14 days of COVID-19 diagnosis increased the risk of developing severe events .,Severe adverse effect
+20,32224151,severe,"Univariate and multivariate analyses were carried out to assess the risk factors associated with severe events defined as a condition requiring admission to an intensive care unit , the use",Severe adverse effect
+21,32227090,severe,risk of heart attack and critically ill condition .,Severe adverse effect
+22,32227090,severe,The finding of this study explains the high rate of severe cases among COVID-19 patients with basic cardiovascular disease ; and these results also perhaps provide important reference to clinical,Severe case
+23,32227123,severe,"Total lymphocytes , CD4+ T cells , CD8+ T cells , B cells , and natural killer ( NK ) cells decreased in COVID-19 patients , and severe cases had",Severe case
+24,32228222,severe,We observed that patients receiving ACEI or ARB therapy had a lower rate of severe diseases and a trend toward a lower level of IL-6 in peripheral blood .,Severe other disease
+25,32232685,severe,"Among the 27 patients with severe acute respiratory failure , four patients were eventually intubated ( 15 % ) .",Severe adverse effect
