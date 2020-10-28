@@ -70,3 +70,61 @@
 *Hao:*
 * use pickle files to improve synonym sets
 * look at sample with ambiguous tags (e.g. "severe", "age", "aged") to develop heuristic to classify or derive confidence/ambiguity scores
+
+### Meeting 10/28
+* Summary
+    * Discussed "severe multitagging"
+    * Developed rule of thumb heuristics to identify "severe"
+    * Showed new implementations/tools from Jane
+    * Discussed limitations of chi-squared test and future action plans for Fengyang
+    * Discussed direction of literature review for Fengyang
+    * Created deliverables plan
+* "Severe" identification heuristics
+    * "Severe disease" goes in both
+    * Drop "severe" tags not properly categorized
+    * Rule of thumb: terms immediately following vs. closest term
+ 
+* "Severe" subtag hierarchy
+     * Cases of COVID-19: infections, severe disease, outcomes
+     * Other diseases: pneumonia, severe disease
+         * Complications
+         * Events
+     * Symptoms: severe acute respiratory failure, ARDS, acidosis, hypercoagulability
+         * Syndrome
+         * SARS
+     * Course
+     * Adverse effect
+ * Develop multitagging system for ALL entities?
+ * Suggestions from Dr. Weng:
+     * same intervention/population -> different outcomes, etc.
+     * categorize segments by intervention/population
+     * independence amongst categories
+     * what are treatments with same outcome
+ * Ambiguous: critical
+
+#### TODO: 
+
+*Jane:*
+* Severe tagger
+* **Send aged/age, critical split**
+* Fix section header thing
+* **classify age/aged**
+* DISCUSS: similarity score between articles
+    * check ambiguous/context-less tags and deriving confidence/ambiguity scores
+    * tag hierarchy
+* fix synonym checker to merge similar tags
+* manually investigate preferred outcomes, treatments
+
+*Fengyang:*
+* **classify age/aged, critical**
+* literature review for PICO multi-tagging system:
+    * Google Scholar, PubMed
+    * Non-medical and medical tagging system
+* TMR: run test for chi-square
+    * build framework for chi-square
+
+
+*Hao:*
+* use pickle files to improve synonym sets
+* Find heuristic for splitting sentence in BioBert
+* **classify age/aged, critical**
