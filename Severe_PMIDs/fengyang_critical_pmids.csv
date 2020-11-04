@@ -1,9 +1,9 @@
 ,pmid,text,sentence,subtag
-16,32639466,critical,"Critical illness was associated with older age ( p = 0.017 ) , longer duration of symptoms ( p = 0.036 ) , and lower oxygen saturation on presentation (",
-17,32651218,critical,"Risk factors for critical illness from SARS-CoV-2 infection include male gender , obesity , diabetes , and age > 65 .",
-18,32651736,critical,"These patients are more likely to develop critical illness , with a high admission to an ICU and a high mortality rate .",
-19,32653111,critical,in eight ( 20 % ) and critical in five ( 12.5 % ) .,
-20,32677752,critical,"OR : 11.90 , 95CI : 4.50 to 36.14 , p < 0.001 ) were independent risk factors for critical illness .",
-21,32702153,critical,"Six ( 14.6 % ) patients died ( severe : 2 , critical : 4 ) ; high creatinine with low lymphocyte count was the biggest challenge of immunosuppression management",
-22,32730223,critical,"HR 4.518 , CI 1.906-10.712 , P < 0.001 ) remained critical illness predictors .",
-23,32730223,critical,Twenty-nine ( 12.5 % ) patients progressed to critical illness .,
+16,32639466,critical,"Critical illness was associated with older age ( p = 0.017 ) , longer duration of symptoms ( p = 0.036 ) , and lower oxygen saturation on presentation (",critical illness
+17,32651218,critical,"Risk factors for critical illness from SARS-CoV-2 infection include male gender , obesity , diabetes , and age > 65 .",critical illness
+18,32651736,critical,"These patients are more likely to develop critical illness , with a high admission to an ICU and a high mortality rate .",critical illness
+19,32653111,critical,in eight ( 20 % ) and critical in five ( 12.5 % ) .,critical condition
+20,32677752,critical,"OR : 11.90 , 95CI : 4.50 to 36.14 , p < 0.001 ) were independent risk factors for critical illness .",critical illness
+21,32702153,critical,"Six ( 14.6 % ) patients died ( severe : 2 , critical : 4 ) ; high creatinine with low lymphocyte count was the biggest challenge of immunosuppression management",critical condition
+22,32730223,critical,"HR 4.518 , CI 1.906-10.712 , P < 0.001 ) remained critical illness predictors .",critical illness
+23,32730223,critical,Twenty-nine ( 12.5 % ) patients progressed to critical illness .,critical illness

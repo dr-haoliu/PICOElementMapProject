@@ -1,28 +1,28 @@
 ,pmid,text,sentence,subtag
-54,32341519,age,"The average age of the patients was 61.8 +- 14.5 years , and the predominant age group was 50-79 .",
-55,32343745,age,Male patients appeared to be more susceptible to age and comorbidities .,
-56,32345362,age,"Our data indicate that SARS-CoV-2 may infect other tissues aside from the lungs and infect persons with different sexes , ages , and races equally .",
-57,32345362,age,We compared ACE2 expression levels across 31 normal human tissues between males and females and between younger ( ages < = 49 years ) and older ( ages > 49,
-58,32345362,age,We compared ACE2 expression levels across 31 normal human tissues between males and females and between younger ( ages < = 49 years ) and older ( ages > 49,
-59,32351040,age,"The median age was 57 ( interquartile range [ IQR ] 47-67 ) , 60 % were male , 40 % Caucasian , and 30 % Black/African American .",
-60,32351196,age,The median age was 69.5 years ( range : 56-84 years ) .,
-61,32352401,aged,A total of three patients died ; all were aged 70 years or older .,
-62,32352401,age,The mean age was 65.5 years and 75 % were males .,
-63,32353223,age,Older age and pre-admission hypertension were key mortality risk factors .,
-64,32353223,age,"Results : Of the 73 patients included in the study , most were male ( 83.6 % ) , the median age was 61 years ( interquartile range [ IQR",
-65,32353398,age,"Based on the data of 154 individuals from 26 provinces , age remained a key mortality risk factor among geriatric patients of different ages .",
-66,32353398,age,"Based on the data of 154 individuals from 26 provinces , age remained a key mortality risk factor among geriatric patients of different ages .",
-67,32353740,age,"Also , older adults and people of any age with serious underlying medical conditions might be at higher risk for severe forms of COVID-19 .",
-68,32353762,age,The majority of cases were in the age group of 50-60 years of old .,
-69,32353762,age,"Patient characteristics including age , gender and underlying diseases were investigated .",
-70,32353762,age,The majority of cases were in the age group of 50 to 60 years of old .,
-71,32354990,age,"Data regarding age , sex , IBD ( type , treatments and clinical activity ) , other comorbidities ( Charlson Comorbidity Index ( CCI ) ) , signs and symptoms",
-72,32356626,age,"The factors we found to be independently associated with an increased risk of in-hospital death were an age greater than 65 years ( mortality of 10.0 % , vs. 4.9",
-73,32357072,age,Results : The average age of the 28 patients was 68.6 +- 9.0 years .,
-74,32358691,aged,The CXR score was significantly higher in males than in females only in groups aged 50 to 79 years .,
-75,32358691,aged,Males aged 50 years or older and females aged 80 years or older with coronavirus disease 2019 showed the highest CXR score ( median > = 8 ) .,
-76,32358691,aged,Males aged 50 years or older and females aged 80 years or older with coronavirus disease 2019 showed the highest CXR score ( median > = 8 ) .,
-77,32358691,aged,Males aged 50 years or older and females aged 80 years or older showed the highest risk of developing severe lung disease .,
-78,32358691,aged,Males aged 50 years or older and females aged 80 years or older showed the highest risk of developing severe lung disease .,
-79,32358691,age,"For each patient , age , sex , and the CXR report containing the highest score were considered for the analysis .",
-80,32359205,age,"The average age was 52 years , 75 % of the patients were female , and 58.3 % had Crohn 's disease .",
+54,32341519,age,"The average age of the patients was 61.8 +- 14.5 years , and the predominant age group was 50-79 .",age range
+55,32343745,age,Male patients appeared to be more susceptible to age and comorbidities .,age concept
+56,32345362,age,"Our data indicate that SARS-CoV-2 may infect other tissues aside from the lungs and infect persons with different sexes , ages , and races equally .",age concept
+57,32345362,age,We compared ACE2 expression levels across 31 normal human tissues between males and females and between younger ( ages < = 49 years ) and older ( ages > 49,age range
+58,32345362,age,We compared ACE2 expression levels across 31 normal human tissues between males and females and between younger ( ages < = 49 years ) and older ( ages > 49,age range
+59,32351040,age,"The median age was 57 ( interquartile range [ IQR ] 47-67 ) , 60 % were male , 40 % Caucasian , and 30 % Black/African American .",age number
+60,32351196,age,The median age was 69.5 years ( range : 56-84 years ) .,age number
+61,32352401,aged,A total of three patients died ; all were aged 70 years or older .,age number
+62,32352401,age,The mean age was 65.5 years and 75 % were males .,age number
+63,32353223,age,Older age and pre-admission hypertension were key mortality risk factors .,age concept
+64,32353223,age,"Results : Of the 73 patients included in the study , most were male ( 83.6 % ) , the median age was 61 years ( interquartile range [ IQR",age number
+65,32353398,age,"Based on the data of 154 individuals from 26 provinces , age remained a key mortality risk factor among geriatric patients of different ages .",age concept
+66,32353398,age,"Based on the data of 154 individuals from 26 provinces , age remained a key mortality risk factor among geriatric patients of different ages .",age concept
+67,32353740,age,"Also , older adults and people of any age with serious underlying medical conditions might be at higher risk for severe forms of COVID-19 .",age concept
+68,32353762,age,The majority of cases were in the age group of 50-60 years of old .,age range
+69,32353762,age,"Patient characteristics including age , gender and underlying diseases were investigated .",age concept
+70,32353762,age,The majority of cases were in the age group of 50 to 60 years of old .,age range
+71,32354990,age,"Data regarding age , sex , IBD ( type , treatments and clinical activity ) , other comorbidities ( Charlson Comorbidity Index ( CCI ) ) , signs and symptoms",age concept
+72,32356626,age,"The factors we found to be independently associated with an increased risk of in-hospital death were an age greater than 65 years ( mortality of 10.0 % , vs. 4.9",age range
+73,32357072,age,Results : The average age of the 28 patients was 68.6 +- 9.0 years .,age number
+74,32358691,aged,The CXR score was significantly higher in males than in females only in groups aged 50 to 79 years .,age range
+75,32358691,aged,Males aged 50 years or older and females aged 80 years or older with coronavirus disease 2019 showed the highest CXR score ( median > = 8 ) .,age number
+76,32358691,aged,Males aged 50 years or older and females aged 80 years or older with coronavirus disease 2019 showed the highest CXR score ( median > = 8 ) .,age number
+77,32358691,aged,Males aged 50 years or older and females aged 80 years or older showed the highest risk of developing severe lung disease .,age number
+78,32358691,aged,Males aged 50 years or older and females aged 80 years or older showed the highest risk of developing severe lung disease .,age number
+79,32358691,age,"For each patient , age , sex , and the CXR report containing the highest score were considered for the analysis .",age concept
+80,32359205,age,"The average age was 52 years , 75 % of the patients were female , and 58.3 % had Crohn 's disease .",age number
