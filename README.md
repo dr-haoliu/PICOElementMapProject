@@ -128,3 +128,42 @@
 * use pickle files to improve synonym sets
 * Find heuristic for splitting sentence in BioBert
 * **classify age/aged, critical**
+
+### Meeting 11/4
+* age:
+    * subtag
+        * median/mean age
+        * age number/range
+            * try to get range
+        * age concept
+    * get values (70+%)
+        * filter by age particle
+        * rules of thumb 
+    * group articles into age group: "pediatric" (<18), "adult", "elderly" (65+)
+        
+* critical:
+    * drop anything not critical illness
+    * when searching, critical and severe should be bundled together
+* embedding doc into vector space:
+    * Doc2Vec
+#### TODO: 
+
+*Jane:*
+* Severe tagger
+* Fix section header thing
+* DISCUSS: similarity score between articles
+    * check ambiguous/context-less tags and deriving confidence/ambiguity scores
+    * weighting system with frequency of subtags
+    * tag hierarchy
+* fix synonym checker to merge similar tags
+
+*Fengyang:*
+* excel sheet for literature review for PICO multi-tagging system:
+* run test for chi-square using different values instead of frequency counts
+    * comparing distributions of entity counts per article
+*    
+
+*Hao:*
+* use pickle files to improve synonym sets
+* Find heuristic for splitting sentence in BioBert
+* **classify age/aged, critical**
