@@ -163,7 +163,61 @@
     * comparing distributions of entity counts per article
 *    
 
-*Hao:*
-* use pickle files to improve synonym sets
-* Find heuristic for splitting sentence in BioBert
-* **classify age/aged, critical**
+
+### Meeting 11/11
+* Manually look at Dr. Weng's suggested outcome, comparing conclusions on a corpus-level
+* Chat with Dr. Weng:
+    * Summarize what we've been doing
+    * Suggestions for subtags, further steps
+* For same PMID, create document with only sentences containing outcome
+    * Use Doc2Vec and compare via cosine similarity
+    * In one group, for the same tag, combine all sentences across PMIDs
+* Potential directions:
+    * Textual entailment
+    * Multi-document summarization
+    
+#### TODO: 
+
+*Jane:*
+* Augment severe tagger
+* Fix section header thing
+* Fix age tagger
+* Look for coverage metrics (e.g. P@10, MAP, etc.)
+* fix synonym checker to merge similar tags
+
+
+*Fengyang:*
+* literature review on whatever topics Dr. Weng suggests
+
+
+### Meeting 11/18
+* First fix participants, among those we can select drug, then we can consider 
+* Outcomes: **mechanical ventilation, in-hospital mortality, severe/severity/severity of covid-19**, tracheostomy, 
+* Interventions: **hydroxychloroquine, remdesivir, tocilizumab**, azithromycin, convalescent plasma, corticosteroid
+* Participants: hypertension, severe, diabetes, elderly, female, pediatric, mechanical ventilation
+* Grouping:
+    * Children/adult/elderly
+    * Medical conditions: hypertension, severe, diabetes,
+    * Gender
+* Similarity value:
+    * Vector for each of the three types, both binary and count
+* Clustering???
+* Checking for:
+    * Population representativeness
+    * Negations
+    * Contradiction, etc.
+    * 20-30 articles each or so
+    
+#### TODO: 
+
+*Jane:*
+* Augment severe tagger
+* Fix section header thing
+* Fix age tagger
+    * Can crossover
+* Look for coverage metrics (e.g. P@10, MAP, etc.)
+* fix synonym checker to merge similar tags
+
+
+*Fengyang:*
+* literature review on whatever topics Dr. Weng suggests
