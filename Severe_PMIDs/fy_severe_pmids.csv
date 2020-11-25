@@ -1,31 +1,31 @@
-,pmid,text,sentence,subtag
-0,32164089,severe,The increased expression of IL-2R and IL-6 in serum is expected to predict the severity of the 2019-nCoV pneumonia and the prognosis of patients .,None
-1,32171866,severe,Elderly patients with COVID-19 are more likely to progress to severe disease .,other diseases
-2,32222466,severe,"Reports from China showed that about 20 % of patients developed severe disease , resulting in a fatality of 4 % .",other diseases
-3,32227123,severe,"Total lymphocytes , CD4+ T cells , CD8+ T cells , B cells , and natural killer ( NK ) cells decreased in COVID-19 patients , and severe cases had",COVID-19
-4,32229705,severe,"infection because the infection rates , severity , and lethality are substantially higher in the population aged 60 and older .",None
-5,32241072,severe,Acute respiratory distress syndrome ( ARDS ) was the most severe pulmonary complication that caused high mortality rate .,None
-6,32257537,severe,"Among them , two common and one severe patient were recovered and discharged in 10 days after treatment .",COVID-19
-7,32269087,severe,The symptoms in neonates were milder and outcomes were less severe compared to adults .,None
-8,32292906,severe,Blocking afferent nerve signaling from the lungs might reduce severity and mortality associated with advanced stage COVID-19 disease .,None
-9,32310621,severe,Preliminary evidence suggests children are just as likely as adults to become infected with SARS-CoV-2 but are less likely to be symptomatic or develop severe symptoms .,None
-10,32310621,severe,"SARS-CoV , MERS-CoV and SARS-CoV-2 seem to less commonly affect children and to cause fewer symptoms and less severe disease in this age group compared with adults , and are",other diseases
-11,32312863,severe,"With a median ( IQR ) follow-up time of 24.0 ( 17.5-30.0 ) days , progression occurred in 19.6 % moderate , 27.8 % severe and 66.7 % critical COVID-19",None
-12,32329978,severe,"Twenty-five patients ( 23.1 % ) developed severe disease , and of those 12 patients ( 48 % ) died .",other diseases
-13,32330287,severe,CONCLUSION : COVID-19 infection during pregnancy probably has a clinical presentation and severity resembling that in non-pregnant adults .,None
-14,32330343,severe,"Twenty-two ( 24 % ) had mild , 41 ( 46 % ) moderate , and 27 ( 30 % ) severe disease .",other diseases
-15,32334118,severe,"Of 127 COVID-19 patients , 16 cases ( 12.60 % ) were classified into the severe group .",COVID-19
-16,32334395,severe,"Diabetes was associated with mortality , severity , and acute respiratory distress syndrome in Coronavirus Disease 2019 .",None
-17,32338347,severe,Infants and young children had relatively more severe illness than older children .,None
-18,32340095,severe,"In severe cases , 11.4 % developed to critical cases ( 10/88 ) .",COVID-19
-19,32340095,severe,The severe cases were mainly occurred in populations at high risk .,COVID-19
-20,32340095,severe,Disease severity and clinical course characteristics of the patients and influencing factors of severe illness were analyzed in our study .,None
-21,32340095,severe,"( 12.1 % ) were severe cases , 58 ( 4.3 % ) were critical cases and 7 ( 0.5 % ) were fatal .",COVID-19
-22,32344320,severe,The level of T lymphocyte could be used as an indicator for prediction of severity and prognosis of patients with COVID-19 pneumonia .,None
-23,32344320,severe,The level of T lymphocyte is an indicator for severity and prognosis of COVID-19 .,None
-24,32345594,severe,"In a study of 105 patients with cancer and 536 without , all with confirmed COVID-19 , cancer was predictive of more severe disease , with stage IV cancer ,",other diseases
-25,32346492,severe,Epidemiological data indicate that at least 20 % of COVID-19 patients have severe disease .,other diseases
-26,32347747,severe,"Thus , by using the safe over-the-counter drug melatonin , we may be immediately able to prevent the development of severe disease symptoms in coronavirus patients , reduce the severity",None
-27,32348495,severe,Here we report that homozygosity for the C allele of rs12252 in the interferon-induced transmembrane protein 3 ( IFITM3 ) gene is associated with more severe disease in an age,other diseases
-28,32349051,severe,"Although it appears that the severity of disease is reduced in pregnant patients , some are likely to develop severe disease .",other diseases
-29,32349055,severe,Previously published papers have demonstrated that increased levels of D-dimer at hospital admission correlate with a more severe disease ( 0.5 mg/L ) or occurrence of death ( 1 mg/L,other diseases
+,pmid,text,sentence,subtag,objective,(result/conclusion),whole sentence
+0,32164089,severe,The increased expression of IL-2R and IL-6 in serum is expected to predict the severity of the 2019-nCoV pneumonia and the prognosis of patients .,None,correlation between serum inflammatory cytokines and severity of the disease,positive correlation,
+1,32171866,severe,Elderly patients with COVID-19 are more likely to progress to severe disease .,other diseases,,,
+2,32222466,severe,"Reports from China showed that about 20 % of patients developed severe disease , resulting in a fatality of 4 % .",other diseases,,,
+3,32227123,severe,"Total lymphocytes , CD4+ T cells , CD8+ T cells , B cells , and natural killer ( NK ) cells decreased in COVID-19 patients , and severe cases had",COVID-19,,,
+4,32229705,severe,"infection because the infection rates , severity , and lethality are substantially higher in the population aged 60 and older .",None,,,
+5,32241072,severe,Acute respiratory distress syndrome ( ARDS ) was the most severe pulmonary complication that caused high mortality rate .,None,compare SARS and Covid,,
+6,32257537,severe,"Among them , two common and one severe patient were recovered and discharged in 10 days after treatment .",COVID-19,,,
+7,32269087,severe,The symptoms in neonates were milder and outcomes were less severe compared to adults .,None,,,
+8,32292906,severe,Blocking afferent nerve signaling from the lungs might reduce severity and mortality associated with advanced stage COVID-19 disease .,None,,,
+9,32310621,severe,Preliminary evidence suggests children are just as likely as adults to become infected with SARS-CoV-2 but are less likely to be symptomatic or develop severe symptoms .,None,,,
+10,32310621,severe,"SARS-CoV , MERS-CoV and SARS-CoV-2 seem to less commonly affect children and to cause fewer symptoms and less severe disease in this age group compared with adults , and are",other diseases,,,
+11,32312863,severe,"With a median ( IQR ) follow-up time of 24.0 ( 17.5-30.0 ) days , progression occurred in 19.6 % moderate , 27.8 % severe and 66.7 % critical COVID-19",None,,,
+12,32329978,severe,"Twenty-five patients ( 23.1 % ) developed severe disease , and of those 12 patients ( 48 % ) died .",other diseases,incidence of SARS -CoV-2 infection vs Coivd-19,,
+13,32330287,severe,CONCLUSION : COVID-19 infection during pregnancy probably has a clinical presentation and severity resembling that in non-pregnant adults .,None,clinical presentation and outcomes during pregnancy,resembling that in non-pregnant adults,
+14,32330343,severe,"Twenty-two ( 24 % ) had mild , 41 ( 46 % ) moderate , and 27 ( 30 % ) severe disease .",other diseases,,,
+15,32334118,severe,"Of 127 COVID-19 patients , 16 cases ( 12.60 % ) were classified into the severe group .",COVID-19,,,
+16,32334395,severe,"Diabetes was associated with mortality , severity , and acute respiratory distress syndrome in Coronavirus Disease 2019 .",None,,,
+17,32338347,severe,Infants and young children had relatively more severe illness than older children .,None,,,
+18,32340095,severe,"In severe cases , 11.4 % developed to critical cases ( 10/88 ) .",COVID-19,analyze the clinical courses and outcomes of COVID-19 cases and the influencing factors in Guangdong province,cases summary,
+19,32340095,severe,The severe cases were mainly occurred in populations at high risk .,COVID-19,analyze the clinical courses and outcomes of COVID-19 cases and the influencing factors in Guangdong province,cases summary,
+20,32340095,severe,Disease severity and clinical course characteristics of the patients and influencing factors of severe illness were analyzed in our study .,None,analyze the clinical courses and outcomes of COVID-19 cases and the influencing factors in Guangdong province,cases summary,
+21,32340095,severe,"( 12.1 % ) were severe cases , 58 ( 4.3 % ) were critical cases and 7 ( 0.5 % ) were fatal .",COVID-19,analyze the clinical courses and outcomes of COVID-19 cases and the influencing factors in Guangdong province,cases summary,
+22,32344320,severe,The level of T lymphocyte could be used as an indicator for prediction of severity and prognosis of patients with COVID-19 pneumonia .,None,,,
+23,32344320,severe,The level of T lymphocyte is an indicator for severity and prognosis of COVID-19 .,None,,,
+24,32345594,severe,"In a study of 105 patients with cancer and 536 without , all with confirmed COVID-19 , cancer was predictive of more severe disease , with stage IV cancer ,",other diseases,,,
+25,32346492,severe,Epidemiological data indicate that at least 20 % of COVID-19 patients have severe disease .,other diseases,,,
+26,32347747,severe,"Thus , by using the safe over-the-counter drug melatonin , we may be immediately able to prevent the development of severe disease symptoms in coronavirus patients , reduce the severity",None,reduce the risk for vulnerable populations(grandparents),,"Thus, by using the safe over-the-counter drug melatonin, we may be immediately able to prevent the development of severe disease symptoms in coronavirus patients, reduce the severity of their symptoms, and/or reduce the immuno-pathology of coronavirus infection on patients' health after the active phase of the infection is over."
+27,32348495,severe,Here we report that homozygosity for the C allele of rs12252 in the interferon-induced transmembrane protein 3 ( IFITM3 ) gene is associated with more severe disease in an age,other diseases,,,
+28,32349051,severe,"Although it appears that the severity of disease is reduced in pregnant patients , some are likely to develop severe disease .",other diseases,,,
+29,32349055,severe,Previously published papers have demonstrated that increased levels of D-dimer at hospital admission correlate with a more severe disease ( 0.5 mg/L ) or occurrence of death ( 1 mg/L,other diseases,,,
