@@ -192,8 +192,8 @@
 
 ### Meeting 11/18
 * First fix participants, among those we can select drug, then we can consider 
-* Outcomes: **mechanical ventilation, in-hospital mortality, severe/severity/severity of covid-19**, tracheostomy, 
-* Interventions: **hydroxychloroquine, remdesivir, tocilizumab**, azithromycin, convalescent plasma, corticosteroid
+* Outcomes: **mechanical ventilation, in-hospital mortality, severe/severity/severity of covid-19**, **tracheostomy**, 
+* Interventions: **hydroxychloroquine, remdesivir, tocilizumab**, azithromycin, **convalescent plasma**, corticosteroid
 * Participants: hypertension, severe, diabetes, elderly, female, pediatric, mechanical ventilation
 * Grouping:
     * Children/adult/elderly
@@ -221,3 +221,23 @@
 
 *Fengyang:*
 * literature review on whatever topics Dr. Weng suggests
+
+### Meeting 11/25
+* Fengyang: "severe" -- focused on the tie between severe Covid and the old SARS virus
+* Fix outcome/intervention: compare distribution of age group + characteristics 
+* Fix outcome: compare interventions
+* Clustering:
+    * Consider general trend of overlapping population tags within a certain cluster??
+    * 
+
+*Jane:*
+* Generate group of studies for Marguerite
+
+*Fengyang:*
+* Fix outcome/intervention: compare distribution of age group + characteristics (or vice versa)
+
+*Hao:*
+* Review group of studies
+
+*Marguerite:*
+* Review group of studies: tracheostomy
