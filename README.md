@@ -241,3 +241,24 @@
 
 *Marguerite:*
 * Review group of studies: tracheostomy
+
+
+### Meeting 11/25
+
+
+*Jane:*
+* Pagerank
+* Get 50 studies with adult/elderly, adult, and elderly, HCQ, in-shopistal mortality
+* Get 50 studies with diabetes, HCQ, in-hospital mortality
+* Get 50 studies with pregnancy, HCQ, in-hospital mortality
+
+*Fengyang:*
+* Get 50 studies with adult/elderly, adult, and elderly, HCQ, in-hospital mortality
+
+*Hao:*
+* Get 50 studies with diabetes, HCQ, in-hospital mortality
+* Get 50 studies with pregnancy, HCQ, in-hospital mortality
+
+*Marguerite:*
+* Literature review: what are the questions and processes followed by other literature reviews assessing the body of Covid studies? What scope are they working
+
